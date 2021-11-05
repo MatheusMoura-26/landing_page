@@ -10,9 +10,12 @@
 </head>
 <body>
     <section>
+        <!--Div para criação do semi-círculo-->
         <div class="circle"></div>
        <header>
+           <!--Link com a logo -->
            <a href="#" class="logo"><img src="imagens/logo.png" alt=""></a>
+           <!--Lista não ordenada para criação de menu na parte superior-->
            <ul>
                <li><a href="index.html">HOME</a></li>
                <li><a href="Login.html">LOGIN</a></li>
@@ -20,6 +23,7 @@
                <li><a href="Contato.html">CONTATO</a></li>             
            </ul>
        </header>
+       <!--Criação da div principal e da div onde ficarão os textos-->
        <div class="content">
            <div class="textBox">
                <h2>Não é só café <br> é <span>Starbucks</span></h2>
@@ -27,28 +31,33 @@
             </p>
                <a href="#">Saiba Mais</a>
            </div>
+           <!--Criação da  div onde ficará a imagem principal -->
            <div class="imgBox">
                <img src="imagens/img1.png" class="starbucks">
            </div>
        </div>
+       <!--Lista não ordenada onde ficarão a seleção da imagens -->
         <ul class="thumb">
             <li> <img src="imagens/thumb1.png"  onclick="imgSlider('imagens/img1.png'); mudacor('#017143')";></li>
             <li> <img src="imagens/thumb2.png" onclick="imgSlider('imagens/img2.png'); mudacor('#eb7495')" ></li>
             <li> <img src="imagens/thumb3.png" onclick="imgSlider('imagens/img3.png'); mudacor('#d752b1')" ></li>
-        </ul>  
+        </ul>
+        <!--Criação de lista não ordenada que irá ser as redes socias da empresa-->  
         <ul class="sci">
-            <li><a href="https://pt-br.facebook.com/StarbucksBrasil/"> <img src="imagens/facebook.png" alt=""></a></li>
-            <li><a href="https://twitter.com/starbucksbrasil"> <img src="imagens/twitter.png" alt=""></a></li>
-            <li><a href="https://www.instagram.com/starbucksbrasil/?hl=pt-br"> <img src="imagens/instagram.png" alt=""></a></li>
+            <li><a href="https://pt-br.facebook.com/StarbucksBrasil/" target="_blank"> <img src="imagens/facebook.png" alt=""></a></li>
+            <li><a href="https://twitter.com/starbucksbrasil" target="_blank"> <img src="imagens/twitter.png" alt=""></a></li>
+            <li><a href="https://www.instagram.com/starbucksbrasil/?hl=pt-br" target="_blank" > <img src="imagens/instagram.png" alt=""></a></li>
         </ul>     
    </section>
    
+<!--JavScript-->
    <script>
-       
+
+    //criando função para alterar imagem       
     function imgSlider(anything){
         document.querySelector('.starbucks').src = anything;
     }
-
+ //criando função para alterar a cor do semi-circulo
     function mudacor(color){
      const circle = document.querySelector('.circle');
      circle.style.background = color;    
