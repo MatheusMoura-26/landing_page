@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,7 +15,7 @@
            <a href="index.html" class="logo"><img src="imagens/logo.png" alt=""></a>
            <ul>
                <li><a href="index.html">HOME</a></li>
-               <li><a href="Login.html">LOGIN</a></li>
+               <li><a href="login.php">LOGIN</a></li>
                <li><a href="historia.html">HISTÓRIA</a></li>
                <li><a href="Contato.html">CONTATO</a></li>             
            </ul>
@@ -96,7 +96,7 @@
 							session_start();
 							$_SESSION['usuario']=$user;
 							$_SESSION['senha']=$pass;
-							header("Location: painel.php");
+							header("Location: home.html");
 						}
 						/* Se o usuario ou a senha não batem alertamos o usuario */
 						else{
